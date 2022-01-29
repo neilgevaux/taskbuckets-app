@@ -1,0 +1,62 @@
+<%= form_with(model: item) do |form| %>
+  <% if item.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(item.errors.count, "error") %> prohibited this item from being saved:</h2>
+
+      <ul>
+        <% item.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :task_id, style: "display: block" %>
+    <%= form.number_field :task_id %>
+  </div>
+
+  <div>
+    <%= form.label :task_name, style: "display: block" %>
+    <%= form.text_field :task_name %>
+  </div>
+
+  <div>
+    <%= form.label :task_description, style: "display: block" %>
+    <%= form.text_area :task_description %>
+  </div>
+
+  <div>
+    <%= form.label :bucket_id, style: "display: block" %>
+    <%= form.number_field :bucket_id %>
+  </div>
+
+  <div>
+    <%= form.label :bucket_name, style: "display: block" %>
+    <%= form.text_field :bucket_name %>
+  </div>
+
+  <div>
+    <%= form.label :date_added, style: "display: block" %>
+    <%= form.datetime_field :date_added %>
+  </div>
+
+  <div>
+    <%= form.label :deadline, style: "display: block" %>
+    <%= form.datetime_field :deadline %>
+  </div>
+
+  <div>
+    <%= form.label :task_completed, style: "display: block" %>
+    <%= form.check_box :task_completed %>
+  </div>
+
+  <div>
+    <%= form.label :user_id, style: "display: block" %>
+    <%= form.number_field :user_id %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

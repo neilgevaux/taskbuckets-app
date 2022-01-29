@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  task_id: 1
+  task_name: MyString
+  task_description: MyText
+  bucket_id: 1
+  bucket_name: MyString
+  date_added: 2022-01-29 13:46:23
+  deadline: 2022-01-29 13:46:23
+  task_completed: false
+  user_id: 1
+
+two:
+  task_id: 1
+  task_name: MyString
+  task_description: MyText
+  bucket_id: 1
+  bucket_name: MyString
+  date_added: 2022-01-29 13:46:23
+  deadline: 2022-01-29 13:46:23
+  task_completed: false
+  user_id: 1
